@@ -43,7 +43,7 @@ public class Application implements CommandLineRunner {
     @Transactional
     public void run(String... args) throws Exception {
         List<Article> articles = new ArrayList<>();
-        articles.add(Article.builder().name("Tonamate").build());
+        articles.add(Article.builder().name("Tomate").build());
         articles.add(Article.builder().name("Apfel").build());
         articles.add(Article.builder().name("Karotte").build());
         articles.add(Article.builder().name("Banane").build());
