@@ -3,19 +3,23 @@ package de.marcusvetter.lima.model;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.transaction.Transactional;
 
 @Builder
 @Entity
-@Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "articles")
-public class Article {
+@Table(name = "cart_items")
+public class CartItem {
 
     @Id
     @GeneratedValue
     private String id;
 
-    private String name;
+    @ManyToOne
+    private Article article;
+
+    @ManyToOne
+    private Cart cart;
 
 }
